@@ -20,7 +20,7 @@ public class SignUpServiceImpl implements SignUpService {
     @Override
     public void signUp(SignUpUserDTO signUpUserDTO) {
 
-        User user =User.builder()
+        User user = User.builder()
                 .login(signUpUserDTO.getEmail())
                 .hashPassword(passwordEncoder.encode(signUpUserDTO.getPassword()))
                 .role(Role.USER)
