@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Registration</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</h:head>
+<body>
+<!--<h:form id="registrationForm">
+    <p:panel header="Registration Form" style="width: 500px;">
+        <p:messages/>
+        <h:panelGrid columns="2">
+            <p:outputLabel value="UserName:"/>
+            <p:inputText id="userName" value="#{userController.registrationUser.userName}" label="UserName" />
+
+            <p:outputLabel value="Password:"/>
+            <p:password id="password" value="#{userController.registrationUser.password}" label="Password"/>
+
+            <p:outputLabel value="FirstName:"/>
+            <p:inputText id="firstName" value="#{userController.registrationUser.firstName}" label="FirstName"/>
+
+            <p:outputLabel value="LastName:"/>
+            <p:inputText id="lastName" value="#{userController.registrationUser.lastName}"/>
+
+            <p:outputLabel value="Email:"/>
+            <p:inputText id="email" value="#{userController.registrationUser.email}"/>
+
+            <p:outputLabel value=""/>
+            <p:commandButton action="/signup" value="Register" update="registrationForm"/>
+
+        </h:panelGrid>
+    </p:panel>
+</h:form>-->
+<form action="/signup" method="post" style="border:1px solid #ccc">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr/>
+
+        <label for="email"><b>Email</b></label>
+        <input id="email" type="text" placeholder="Enter Email" name="email" required="required" />
+
+        <label for="psw"><b>Password</b></label>
+        <input id="psw" type="password" placeholder="Enter Password" name="password" required="required" />
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input id="psw-repeat" type="password" placeholder="Repeat Password" name="pswRepeat" required="required" />
+
+        <!--<label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me </input>
+        </label>-->
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &amp; Privacy</a>.</p>
+
+        <div class="clearfix">
+            <a href="/login"><button type="button" class="cancelbtn">Login</button></a>
+            <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
