@@ -23,7 +23,7 @@ public class SignUpController {
     public String signUp(SignUpUserDTO signUpUserDTO){
         signUpService.signUp(signUpUserDTO);
 
-        return "index.xhtml";
+        return "login.xhtml";
     }
     @GetMapping(value = "")
     public String signUp(){
