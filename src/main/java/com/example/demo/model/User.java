@@ -2,16 +2,14 @@ package com.example.demo.model;
 
 import com.example.demo.model.enums.Role;
 import com.example.demo.model.enums.State;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
-
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User {
 
@@ -26,3 +24,4 @@ public class User {
     private State  state;
 
 }
+
